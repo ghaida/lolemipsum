@@ -91,16 +91,6 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(baconParams, baconParams, callback);
       }
-      if (tweet.text.match('gimme hipster text')) {
-        var number = getRandNum();
-        var hipsterText = getRandHipsterIpsum();
-        var hipsterParams = {
-          status: '@' + tweet.user.screen_name + hipsterText,
-          in_reply_to_status_id: tweet.id
-        };
-        console.log(tweet.text);
-        lol.updateStatus(hipsterParams, hipsterParams, callback);
-      }
     });
   });
 }
