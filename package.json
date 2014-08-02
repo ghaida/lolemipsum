@@ -1,0 +1,32 @@
+{
+  "name": "lolemipsum",
+  "version": "0.0.0",
+  "description": "A twitter bot that will generate a short paragraph of lorem ipsum text if you tweet at it.",
+  "main": "lol.js",
+  "dependencies": {
+    "express": "^4.7.2",
+    "logfmt": "^1.1.2",
+    "ntwitter": "^0.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ghaida/lolemipsum.git"
+  },
+  "keywords": [
+    "lorem",
+    "ipsum",
+    "lol",
+    "cats",
+    "bacon"
+  ],
+  "author": "Ghaida Zahran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghaida/lolemipsum/issues"
+  },
+  "homepage": "https://github.com/ghaida/lolemipsum"
+}
