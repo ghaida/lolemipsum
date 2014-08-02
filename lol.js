@@ -7,7 +7,7 @@ var lol = new ntwitter(auth);
 
 // use unholy sorcery to get a random number from 1 to 10
 function getRandNum() {
-  var number = Math.floor((Math.random()*10)+1);
+  var number = Math.floor((Math.random()*5)+1);
   return number;
 }
 
@@ -19,19 +19,27 @@ function getRandIndex(array) {
 // get a catipsum
 function getRandCatIpsum() {
   catipsums = [
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.1',
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.2',
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.3',
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.4',
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.5',
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.6',
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.7',
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.8',
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.9',
-  'Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Cheeseburgers.10'
+  " Lick butt destroy couch, so kick up litter chase imaginary bugs chew foot sun bathe, for stare at ceiling. Intently sniff.",
+  " Run in circles cat goes crazy, and i like big cats and i cannot lie bathe private parts with tongue then lick owner's face.",
+  " Climb leg cat snacks, or lick butt climb leg, or stand in front of the computer screen destroy couch have secret plans.",
+  " Stand in front of the computer screen run in circles kick up litter. Hunt anything that moves swat at dog, present belly.",
+  " Stare at ceiling stand in front of the computer screen leave fur on owners clothes, so play time, rub face on everything."
   ];
   var catipsum = getRandIndex(catipsums);
   return catipsum;
+}
+
+// get a baconipsum
+function getRandBaconIpsum() {
+  baconipsums = [
+  " Bacon ipsum dolor sit amet pork loin pork t-bone swine cow corned beef tongue spare ribs ground round. Meatloaf, leberkas.",
+  " Pork loin ham pig meatloaf sirloin biltong jowl kevin. Pastrami jerky andouille ham, ball tip rump salami venison chuck.",
+  " Pastrami corned beef boudin tenderloin. Ground round pork loin,  spare ribs andouille beef. Turkey spare ribs pork chop.",
+  " Spare ribs. Tenderloin prosciutto turducken, andouille biltong ground round. Bacon drumstick sausage hamburger beef ribs.",
+  " Stare at ceiling stand in front of the computer screen leave fur on owners clothes, so play time, rub face on everything."
+  ];
+  var baconipsum = getRandIndex(baconipsums);
+  return baconipsum;
 }
 
 // Log errors
@@ -43,7 +51,7 @@ var callback = function handleError(error) {
 };
 
 // Array to store streamed tweets
-var queue = [];
+// var queue = [];
 // Get a stream of Tweets
 function startStreaming() {
   lol.stream('statuses/filter', { track: '@lolem_ipsum' }, function(stream) {
@@ -58,7 +66,7 @@ function startStreaming() {
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
-        bot.updateStatus(catParams, callback);
+        lol.updateStatus(catParams, catParams, callback);
       }
     });
   });
