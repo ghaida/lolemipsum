@@ -3,8 +3,7 @@ _gh_pages
 _site
 .ruby-version
 
-# Ignore auth and derp file
-auth.js
+# Ignore auth and derp files
 derp.js
 
 # Numerous always-ignore extensions
