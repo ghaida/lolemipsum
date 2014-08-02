@@ -91,7 +91,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(baconParams, baconParams, callback);
       }
-      if (tweet.text.match('gimme bacon text')) {
+      if (tweet.text.match('gimme hipster text')) {
         var number = getRandNum();
         var hipsterText = getRandHipsterIpsum();
         var hipsterParams = {
