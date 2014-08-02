@@ -11,3 +11,5 @@ I followed this awesome tutorial by Imogen Wentworth to create the bot:
 http://imogenation.net/building-a-node-js-twitter-bot/
 
 To use this awesome bot, tweet "gimme [cat, bacon] text" @lolem_ipsum.
+
+This bot is proudly powered by burritos. :sunglasses:
