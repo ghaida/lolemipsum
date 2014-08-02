@@ -55,6 +55,20 @@ function getRandHipsterIpsum() {
   return hipsteripsum;
 }
 
+// get a hipsteripsum
+function getRandSpaceIpsum() {
+  spaceipsums = [
+  " Here men from the planet Earth first set foot upon the Moon. July 1969. We came in peace for all mankind. Man must explore.",
+  " The regret on our side is, they used to say years ago, we are reading about you in science class. Now they say, we are reading about you in history class.",
+  " As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble.",
+  " Some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators.",
+  " Mankind, let us preserve and increase this beauty, and not destroy it! Houston, Tranquillity Base here. The Eagle has landed."
+  ];
+  var spaceipsum = getRandIndex(spaceipsums);
+  return spaceipsum;
+}
+
+
 // Log errors
 var callback = function handleError(error) {
   if (error) {
@@ -100,6 +114,16 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(hipsterParams, hipsterParams, callback);
+      }
+      if (tweet.text.match('gimme space text')) {
+        var number = getRandNum();
+        var spaceText = getRandSpaceIpsum();
+        var spaceParams = {
+          status: '@' + tweet.user.screen_name + spaceText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(spaceParams, spaceParams, callback);
       }
     });
   });
