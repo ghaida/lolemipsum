@@ -42,6 +42,19 @@ function getRandBaconIpsum() {
   return baconipsum;
 }
 
+// get a hipsteripsum
+function getRandHipsterIpsum() {
+  hipsteripsums = [
+  " Viral irony yr, chambray gastropub literally gentrify ugh Carles lo-fi. Carles banjo cliche, freegan gluten-free.",
+  " Polaroid gastropub four loko Truffaut swag, pop-up raw denim 3 wolf moon sustainable mlkshk cardigan mixtape viral 90's.",
+  " Put a bird on it semiotics distillery, ugh plaid blog polaroid drinking vinegar Blue Bottle Williamsburg photo booth.",
+  " Etsy kogi fashion axe, 90's umami synth asymmetrical. IPhone selfies Brooklyn actually lomo. Portland freegan loko art.",
+  " Typewriter chia chillwave kitsch, actually meh gluten-free fanny pack chambray raw denim. Kogi post-ironic food truck."
+  ];
+  var hipsteripsum = getRandIndex(hipsteripsums);
+  return hipsteripsum;
+}
+
 // Log errors
 var callback = function handleError(error) {
   if (error) {
@@ -77,6 +90,16 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(baconParams, baconParams, callback);
+      }
+      if (tweet.text.match('gimme bacon text')) {
+        var number = getRandNum();
+        var hipsterText = getRandHipsterIpsum();
+        var hipsterParams = {
+          status: '@' + tweet.user.screen_name + hipsterText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(hipsterParams, hipsterParams, callback);
       }
     });
   });
