@@ -36,7 +36,7 @@ function getRandBaconIpsum() {
   " Pork loin ham pig meatloaf sirloin biltong jowl kevin. Pastrami jerky andouille ham, ball tip rump salami venison chuck.",
   " Pastrami corned beef boudin tenderloin. Ground round pork loin,  spare ribs andouille beef. Turkey spare ribs pork chop.",
   " Spare ribs. Tenderloin prosciutto turducken, andouille biltong ground round. Bacon drumstick sausage hamburger beef ribs.",
-  " Stare at ceiling stand in front of the computer screen leave fur on owners clothes, so play time, rub face on everything."
+  " Pork loin swine leberkas ham hock, drumstick strip steak capicola pork chop beef ribs. Bresaola pork loin meatloaf, jerky."
   ];
   var baconipsum = getRandIndex(baconipsums);
   return baconipsum;
@@ -67,6 +67,16 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(catParams, catParams, callback);
+      }
+      if (tweet.text.match('gimme bacon text')) {
+        var number = getRandNum();
+        var baconText = getRandBaconIpsum();
+        var baconParams = {
+          status: '@' + tweet.user.screen_name + baconText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(baconParams, baconParams, callback);
       }
     });
   });
