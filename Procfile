@@ -1,1 +1,1 @@
-bot: node lol.js
+lol: node lol.js
