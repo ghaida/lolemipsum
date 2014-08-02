@@ -2,8 +2,8 @@
 
 This is the coolest twitter bot in all the land! It'll generate a short paragraph of lorem ipsum text for you. You can get these flavors of lorem ipsum:
 
-* Cats :cat:
-* Bacon :meat_on_bone:
+* Cats :cat: text from: http://catipsum.com
+* Meats :meat_on_bone: text from http://baconipsum.com
 
 Obvi there are probably better ways to get the text than to just put static text in array but whatevs.
 
