@@ -55,19 +55,31 @@ function getRandHipsterIpsum() {
   return hipsteripsum;
 }
 
-// get a hipsteripsum
+// get a spaceipsum
 function getRandSpaceIpsum() {
   spaceipsums = [
-  " Here men from the planet Earth first set foot upon the Moon. July 1969. We came in peace for all mankind. Man must explore.",
-  " The regret on our side is, they used to say years ago, we are reading about you in science class. Now they say, we are reading about you in history class.",
+  " Here men from the planet Earth first set foot upon the Moon. July 1969. We came in peace for all mankind. Man must explore. ",
+  " Houston, Tranquillity Base here. The Eagle has landed. That's one small step for [a] man, one giant leap for mankind.",
   " As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble.",
-  " Some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators.",
+  " Space, the final frontier. These are the voyages of the Starship Enterprise. Its mission: to explore strange new worlds.",
   " Mankind, let us preserve and increase this beauty, and not destroy it! Houston, Tranquillity Base here. The Eagle has landed."
   ];
   var spaceipsum = getRandIndex(spaceipsums);
   return spaceipsum;
 }
 
+// get a yogaipsum
+function getRandYogaIpsum() {
+  spaceipsums = [
+  " A thin, round flat bread. abhyantara an incarnation of god. bhujanga vedha chapatti chit kundalini garland pose.",
+  " Agnistambhasana pose ashwini bund cock pose. easy breath energy center in the heart region, fourth of the seven chakras.",
+  " Bhagvad gita brahmin collecting. contentment, one of the five niyamas, second of the eight stages of classic yoga.",
+  " A breathing technique which produces a light sonorous sound. People living together, teaching or learning yogic tradition.",
+  " A language used in of yoga, hinduism and buddhism, and an official languages of india, considered “historical”."
+  ];
+  var yogaipsum = getRandIndex(yogaipsums);
+  return yogaipsum;
+}
 
 // Log errors
 var callback = function handleError(error) {
