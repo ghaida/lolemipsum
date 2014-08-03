@@ -81,6 +81,19 @@ function getRandYogaIpsum() {
   return yogaipsum;
 }
 
+// get a yogaipsum
+function getRandBsniiIpsum() {
+  bsniiipsums = [
+  " B'snii chickabii d'sde chicka'shnii.",
+  " B'snii chickabii d'sde. B'snii chickabii d'sde. B'snii chickabii, b'snii chicka'shnii. B'snii chickabna d'stamii.", // evil'snii >:)
+  " Lorem ipsum dolor b'snii chickabii d'stamana chickabana d'stashnii.",
+  " B'snii chickabii d'sde. B'snii chickabii d'sde. B'snii chickabii, b'snii chicka'shnii. B'snii chickabii d'sde.",
+  " B'snii chickabii chicka'shnii!"
+  ];
+  var bsniiipsum = getRandIndex(bsniiipsums);
+  return bsniiipsum;
+}
+
 // Log errors
 var callback = function handleError(error) {
   if (error) {
@@ -146,6 +159,16 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(yogaParams, yogaParams, callback);
+      }
+      if (tweet.text.match("gimme b'snii text")) {
+        var number = getRandNum();
+        var bsniiText = getRandBsniiIpsum();
+        var bsniiParams = {
+          status: '@' + tweet.user.screen_name + bsniiText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(bsniiParams, bsniiParams, callback);
       }
     });
   });
