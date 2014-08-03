@@ -137,6 +137,16 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(spaceParams, spaceParams, callback);
       }
+      if (tweet.text.match('gimme yoga text')) {
+        var number = getRandNum();
+        var yogaText = getRandYogaIpsum();
+        var yogaParams = {
+          status: '@' + tweet.user.screen_name + yogaText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(yogaParams, yogaParams, callback);
+      }
     });
   });
 }
