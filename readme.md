@@ -7,7 +7,7 @@ This is the coolest twitter bot in all the land! It'll generate a short paragrap
 * :eyeglasses: Hipster text from http://hipsum.co/
 * :stars: Space text from http://spaceipsum.com/
 * :ok_woman: Yoga text from http://www.kellykundalini.com/yoga/funny-yoga-filler-text-aka-yoga-ipsum/
-* :muscle: tClimbing ext
+* :muscle: Climbing text
 
 Obvi there are probably better ways to get the text than to just put static text in array but whatevs.
 
