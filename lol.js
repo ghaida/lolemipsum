@@ -81,7 +81,7 @@ function getRandYogaIpsum() {
   return yogaipsum;
 }
 
-// get a yogaipsum
+// get a bsniiipsum
 function getRandBsniiIpsum() {
   bsniiipsums = [
   " B'snii chickabii d'sde chicka'shnii.",
@@ -94,6 +94,18 @@ function getRandBsniiIpsum() {
   return bsniiipsum;
 }
 
+// get a swolipsum
+function getRandSwolIpsum() {
+  swolipsums = [
+  " Swol bouldering canyoning carabiner harness chalk bag. Five ten crash pad rope lead climber ascend sport climbing belay.",
+  " Pole lumberjack chalk bag rope atc crash pad five ten harness ascend downclimb lead mountaineering, deep water soloing.",
+  " Bouldering swol free solo lead climbing tree fall factor, parkour anchors indoor holds ice shoes chalk bag clif bar.",
+  " Top roping crash pad jug pocket patagonia hiking spotting cliff. Altitude sickness atc belay carabiner hang-dogging.",
+  " Crash pad belay crux deep water soloing. Dyno figure eight flute grigri crimp pocket, approach side pull slab wolf moon."
+  ];
+  var swolipsum = getRandIndex(swolipsums);
+  return swolipsum;
+}
 // Log errors
 var callback = function handleError(error) {
   if (error) {
@@ -169,6 +181,16 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(bsniiParams, bsniiParams, callback);
+      }
+      if (tweet.text.match("gimme swol text")) {
+        var number = getRandNum();
+        var swolText = getRandSwolIpsum();
+        var swolParams = {
+          status: '@' + tweet.user.screen_name + swolText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(swolParams, swolParams, callback);
       }
     });
   });
