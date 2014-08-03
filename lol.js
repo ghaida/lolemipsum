@@ -70,7 +70,7 @@ function getRandSpaceIpsum() {
 
 // get a yogaipsum
 function getRandYogaIpsum() {
-  spaceipsums = [
+  yogaipsums = [
   " A thin, round flat bread. abhyantara an incarnation of god. bhujanga vedha chapatti chit kundalini garland pose.",
   " Agnistambhasana pose ashwini bund cock pose. easy breath energy center in the heart region, fourth of the seven chakras.",
   " Bhagvad gita brahmin collecting. contentment, one of the five niyamas, second of the eight stages of classic yoga.",
