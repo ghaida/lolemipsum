@@ -122,107 +122,85 @@ function startStreaming() {
   lol.stream('statuses/filter', { track: "@lolem_ipsum" }, function(stream) {
     console.log('Listening for Tweets...');
     stream.on('data', function(tweet) {
-      switch (tweet.text) {
-        case tweet.text.match("gimme cat"):
-          var number = getRandNum();
-          var catText = getRandCatIpsum();
-          var catParams = {
-            status: '@' + tweet.user.screen_name + catText,
-            in_reply_to_status_id: tweet.id
-          };
-          console.log(tweet.text);
-          lol.updateStatus(catParams, catParams, callback);
-          break;
-        // sass.js
-        default:
-          var nopeParams = {
-            status: '@' + tweet.user.screen_name + nope,
-            in_reply_to_status_id: tweet.id
-          };
-          console.log(tweet.text);
-          lol.updateStatus(nopeParams, nopeParams, callback);
-          break;
-        }
+      Check Tweet for specific matching phrases as Twitter's Streaming API doesn't allow for this
+      if (tweet.text.match("cat")) {
+        var number = getRandNum();
+        var catText = getRandCatIpsum();
+        var catParams = {
+          status: '@' + tweet.user.screen_name + catText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(catParams, catParams, callback);
       }
-      // Check Tweet for specific matching phrases as Twitter's Streaming API doesn't allow for this
-      // if (tweet.text.match("gimme cat")) {
-      //   var number = getRandNum();
-      //   var catText = getRandCatIpsum();
-      //   var catParams = {
-      //     status: '@' + tweet.user.screen_name + catText,
-      //     in_reply_to_status_id: tweet.id
-      //   };
-      //   console.log(tweet.text);
-      //   lol.updateStatus(catParams, catParams, callback);
-      // }
-      // else if(tweet.text.match("gimme bacon")) {
-      //   var number = getRandNum();
-      //   var baconText = getRandBaconIpsum();
-      //   var baconParams = {
-      //     status: '@' + tweet.user.screen_name + baconText,
-      //     in_reply_to_status_id: tweet.id
-      //   };
-      //   console.log(tweet.text);
-      //   lol.updateStatus(baconParams, baconParams, callback);
-      // }
-      // else if(tweet.text.match("gimme hipster")) {
-      //   var number = getRandNum();
-      //   var hipsterText = getRandHipsterIpsum();
-      //   var hipsterParams = {
-      //     status: '@' + tweet.user.screen_name + hipsterText,
-      //     in_reply_to_status_id: tweet.id
-      //   };
-      //   console.log(tweet.text);
-      //   lol.updateStatus(hipsterParams, hipsterParams, callback);
-      // }
-      // else if(tweet.text.match("gimme space")) {
-      //   var number = getRandNum();
-      //   var spaceText = getRandSpaceIpsum();
-      //   var spaceParams = {
-      //     status: '@' + tweet.user.screen_name + spaceText,
-      //     in_reply_to_status_id: tweet.id
-      //   };
-      //   console.log(tweet.text);
-      //   lol.updateStatus(spaceParams, spaceParams, callback);
-      // }
-      // else if(tweet.text.match("gimme yoga")) {
-      //   var number = getRandNum();
-      //   var yogaText = getRandYogaIpsum();
-      //   var yogaParams = {
-      //     status: '@' + tweet.user.screen_name + yogaText,
-      //     in_reply_to_status_id: tweet.id
-      //   };
-      //   console.log(tweet.text);
-      //   lol.updateStatus(yogaParams, yogaParams, callback);
-      // }
-      // else if(tweet.text.match("gimme b'snii")) {
-      //   var number = getRandNum();
-      //   var bsniiText = getRandBsniiIpsum();
-      //   var bsniiParams = {
-      //     status: '@' + tweet.user.screen_name + bsniiText,
-      //     in_reply_to_status_id: tweet.id
-      //   };
-      //   console.log(tweet.text);
-      //   lol.updateStatus(bsniiParams, bsniiParams, callback);
-      // }
-      // else if(tweet.text.match("gimme swol")) {
-      //   var number = getRandNum();
-      //   var swolText = getRandSwolIpsum();
-      //   var swolParams = {
-      //     status: '@' + tweet.user.screen_name + swolText,
-      //     in_reply_to_status_id: tweet.id
-      //   };
-      //   console.log(tweet.text);
-      //   lol.updateStatus(swolParams, swolParams, callback);
-      // }
-      // else {
-      //   var nopeParams = {
-      //     status: '@' + tweet.user.screen_name + nope,
-      //     in_reply_to_status_id: tweet.id
-      //   };
-      //   console.log(tweet.text);
-      //   lol.updateStatus(nopeParams, nopeParams, callback);
-      // }
+      else if(tweet.text.match("bacon")) {
+        var number = getRandNum();
+        var baconText = getRandBaconIpsum();
+        var baconParams = {
+          status: '@' + tweet.user.screen_name + baconText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(baconParams, baconParams, callback);
+      }
+      else if(tweet.text.match("hipster")) {
+        var number = getRandNum();
+        var hipsterText = getRandHipsterIpsum();
+        var hipsterParams = {
+          status: '@' + tweet.user.screen_name + hipsterText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(hipsterParams, hipsterParams, callback);
+      }
+      else if(tweet.text.match("space")) {
+        var number = getRandNum();
+        var spaceText = getRandSpaceIpsum();
+        var spaceParams = {
+          status: '@' + tweet.user.screen_name + spaceText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(spaceParams, spaceParams, callback);
+      }
+      else if(tweet.text.match("yoga")) {
+        var number = getRandNum();
+        var yogaText = getRandYogaIpsum();
+        var yogaParams = {
+          status: '@' + tweet.user.screen_name + yogaText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(yogaParams, yogaParams, callback);
+      }
+      else if(tweet.text.match("b'snii")) {
+        var number = getRandNum();
+        var bsniiText = getRandBsniiIpsum();
+        var bsniiParams = {
+          status: '@' + tweet.user.screen_name + bsniiText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(bsniiParams, bsniiParams, callback);
+      }
+      else if(tweet.text.match("swol")) {
+        var number = getRandNum();
+        var swolText = getRandSwolIpsum();
+        var swolParams = {
+          status: '@' + tweet.user.screen_name + swolText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(swolParams, swolParams, callback);
+      }
+      else {
+        var nopeParams = {
+          status: '@' + tweet.user.screen_name + nope,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(nopeParams, nopeParams, callback);
+      }
     });
   });
 }
