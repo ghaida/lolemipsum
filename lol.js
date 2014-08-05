@@ -122,7 +122,7 @@ function startStreaming() {
   lol.stream('statuses/filter', { track: "@lolem_ipsum" }, function(stream) {
     console.log('Listening for Tweets...');
     stream.on('data', function(tweet) {
-      switch (tweet) {
+      switch (tweet.text) {
         case tweet.text.match("gimme cat"):
           var number = getRandNum();
           var catText = getRandCatIpsum();
