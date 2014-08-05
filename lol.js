@@ -122,7 +122,7 @@ function startStreaming() {
   lol.stream('statuses/filter', { track: "@lolem_ipsum" }, function(stream) {
     console.log('Listening for Tweets...');
     stream.on('data', function(tweet) {
-      Check Tweet for specific matching phrases as Twitter's Streaming API doesn't allow for this
+      // Check Tweet for specific matching phrases as Twitter's Streaming API doesn't allow for this
       if (tweet.text.match("cat")) {
         var number = getRandNum();
         var catText = getRandCatIpsum();
