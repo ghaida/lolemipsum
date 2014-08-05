@@ -4,7 +4,7 @@
 var ntwitter = require('ntwitter');
 var auth = require('./auth');
 var lol = new ntwitter(auth);
-var nope = " Sorry I don't know anything about that yet :(";
+var nope = " I don't know anything about that yet :( #sorry #notsorry";
 
 // use unholy sorcery to get a random number from 1 to 10
 function getRandNum() {
