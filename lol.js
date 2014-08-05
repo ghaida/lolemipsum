@@ -118,11 +118,11 @@ var callback = function handleError(error) {
 // var queue = [];
 // Get a stream of Tweets
 function startStreaming() {
-  lol.stream('statuses/filter', { track: '@lolem_ipsum' }, function(stream) {
+  lol.stream('statuses/filter', { track: "@lolem_ipsum" }, function(stream) {
     console.log('Listening for Tweets...');
     stream.on('data', function(tweet) {
       // Check Tweet for specific matching phrases as Twitter's Streaming API doesn't allow for this
-      if (tweet.text.match('gimme cat text')) {
+      if (tweet.text.match("gimme cat")) {
         var number = getRandNum();
         var catText = getRandCatIpsum();
         var catParams = {
@@ -132,7 +132,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(catParams, catParams, callback);
       }
-      if (tweet.text.match('gimme bacon text')) {
+      if (tweet.text.match("gimme bacon")) {
         var number = getRandNum();
         var baconText = getRandBaconIpsum();
         var baconParams = {
@@ -142,7 +142,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(baconParams, baconParams, callback);
       }
-      if (tweet.text.match('gimme hipster text')) {
+      if (tweet.text.match("gimme hipster")) {
         var number = getRandNum();
         var hipsterText = getRandHipsterIpsum();
         var hipsterParams = {
@@ -152,7 +152,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(hipsterParams, hipsterParams, callback);
       }
-      if (tweet.text.match('gimme space text')) {
+      if (tweet.text.match("gimme space")) {
         var number = getRandNum();
         var spaceText = getRandSpaceIpsum();
         var spaceParams = {
@@ -162,7 +162,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(spaceParams, spaceParams, callback);
       }
-      if (tweet.text.match('gimme yoga text')) {
+      if (tweet.text.match("gimme yoga")) {
         var number = getRandNum();
         var yogaText = getRandYogaIpsum();
         var yogaParams = {
@@ -172,7 +172,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(yogaParams, yogaParams, callback);
       }
-      if (tweet.text.match("gimme b'snii text")) {
+      if (tweet.text.match("gimme b'snii")) {
         var number = getRandNum();
         var bsniiText = getRandBsniiIpsum();
         var bsniiParams = {
@@ -182,7 +182,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(bsniiParams, bsniiParams, callback);
       }
-      if (tweet.text.match("gimme swol text")) {
+      if (tweet.text.match("gimme swol")) {
         var number = getRandNum();
         var swolText = getRandSwolIpsum();
         var swolParams = {
