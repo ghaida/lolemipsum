@@ -4,6 +4,7 @@
 var ntwitter = require('ntwitter');
 var auth = require('./auth');
 var lol = new ntwitter(auth);
+var nope = "Sorry I don't know anything about that for now :(";
 
 // use unholy sorcery to get a random number from 1 to 10
 function getRandNum() {
@@ -191,6 +192,14 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(swolParams, swolParams, callback);
+      }
+      else {
+        var nopeParams = {
+          status: '@' + tweet.user.screen_name + nope,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(nopeParams, nopeParams, callback);
       }
     });
   });
