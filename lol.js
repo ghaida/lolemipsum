@@ -133,7 +133,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(catParams, catParams, callback);
       }
-      else (tweet.text.match("gimme bacon")) {
+      else if(tweet.text.match("gimme bacon")) {
         var number = getRandNum();
         var baconText = getRandBaconIpsum();
         var baconParams = {
@@ -143,7 +143,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(baconParams, baconParams, callback);
       }
-      else (tweet.text.match("gimme hipster")) {
+      else if(tweet.text.match("gimme hipster")) {
         var number = getRandNum();
         var hipsterText = getRandHipsterIpsum();
         var hipsterParams = {
@@ -153,7 +153,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(hipsterParams, hipsterParams, callback);
       }
-      else (tweet.text.match("gimme space")) {
+      else if(tweet.text.match("gimme space")) {
         var number = getRandNum();
         var spaceText = getRandSpaceIpsum();
         var spaceParams = {
@@ -163,7 +163,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(spaceParams, spaceParams, callback);
       }
-      else (tweet.text.match("gimme yoga")) {
+      else if(tweet.text.match("gimme yoga")) {
         var number = getRandNum();
         var yogaText = getRandYogaIpsum();
         var yogaParams = {
@@ -173,7 +173,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(yogaParams, yogaParams, callback);
       }
-      else (tweet.text.match("gimme b'snii")) {
+      else if(tweet.text.match("gimme b'snii")) {
         var number = getRandNum();
         var bsniiText = getRandBsniiIpsum();
         var bsniiParams = {
@@ -183,7 +183,7 @@ function startStreaming() {
         console.log(tweet.text);
         lol.updateStatus(bsniiParams, bsniiParams, callback);
       }
-      else (tweet.text.match("gimme swol")) {
+      else if(tweet.text.match("gimme swol")) {
         var number = getRandNum();
         var swolText = getRandSwolIpsum();
         var swolParams = {
