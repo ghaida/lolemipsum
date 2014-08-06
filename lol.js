@@ -23,7 +23,7 @@ function getNope() {
   " You can't make me.",
   " I said goodby, sir!",
   " By your command.",
-  " My alignment is chaotic good. Wait, what were you saying?"
+  " My alignment is chaotic good. Wait, what were you saying?",
   " zzzZZZzzzZZZZzzz",
   " zzz",
   " Sleeping, bye.",
