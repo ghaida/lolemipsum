@@ -45,7 +45,11 @@ function getRandCatIpsum() {
   " Run in circles cat goes crazy, and i like big cats and i cannot lie bathe private parts with tongue then lick owner's face.",
   " Climb leg cat snacks, or lick butt climb leg, or stand in front of the computer screen destroy couch have secret plans.",
   " Stand in front of the computer screen run in circles kick up litter. Hunt anything that moves swat at dog, present belly.",
-  " Stare at ceiling stand in front of the computer screen leave fur on owners clothes, so play time, rub face on everything."
+  " Stare at ceiling stand in front of the computer screen leave fur on owners clothes, so play time, rub face on everything.",
+  " Nap all day swat at dog favor packaging over toy leave fur on owners clothes hunt anything that moves, climb leg scamper.",
+  " Throw up on your pillow stare at ceiling cat goes crazy hopped up on catnip, cheeseburgers. Human slave food dispenser.",
+  " Give attitude kick up litter flop over claw drapes, and throwup on your pillow, and stand in front of the computer screen.",
+  " Inspect anything brought into the house chew foot, need to chase tail, and flop over, leave fur on owners clothes."
   ];
   var catipsum = getRandIndex(catipsums);
   return catipsum;
