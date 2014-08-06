@@ -107,6 +107,20 @@ function getRandSwolIpsum() {
   var swolipsum = getRandIndex(swolipsums);
   return swolipsum;
 }
+
+// get a tacobellipsum
+function getRandTacoBellIpsum() {
+  tacobellipsums = [
+  " Taco bell cantina power, taco. Breakfast burrito fourthmeal spicy fresco why pay more pico de gallo chicken bowl.",
+  " A.M. Mountain dew toppings breakfast menu 350 calories. Grande scrambler cinnamon twists small price? Cheesy nachos.",
+  " Cheesy gordita crunch 7-layer burrito brownie sandwich, nachos supreme. Nacho cheese doritos loco taco supreme soft taco.",
+  " Double decker taco supreme cantina power burrito! Chalupa supreme caramel, fiesta taco salad mtn dew baja blast freeze.",
+  " Crunchy taco supreme meximelt? Cheese roll-up chalupa supreme dr pepper vanilla float freeze. Fiesta taco salad churros."
+  ];
+  var tacobellipsum = getRandIndex(tacobellipsums);
+  return tacobellipsum;
+}
+
 // Log errors
 var callback = function handleError(error) {
   if (error) {
@@ -192,6 +206,16 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(swolParams, swolParams, callback);
+      }
+      else if(tweet.text.match("taco bell")) {
+        var number = getRandNum();
+        var tacoBellText = getRandTacoBellIpsum();
+        var tacoBellParams = {
+          status: '@' + tweet.user.screen_name + tacoBellText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(tacoBellParams, tacoBellParams, callback);
       }
       else {
         var nopeParams = {
