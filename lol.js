@@ -1,8 +1,8 @@
 // a bot that will reply to tweets with placeholder text
 // thanks to Imogen Wentworth for the awesome tutorial at http://imogenation.net/building-a-node-js-twitter-bot/
 
-var ntwitter = require('ntwitter');
-var auth = require('./auth');
+var ntwitter = require("ntwitter");
+var auth = require("./auth");
 var lol = new ntwitter(auth);
 var nope = " I don't know anything about that yet #sorry #notsorry";
 
@@ -137,8 +137,8 @@ function getRandDogeIpsum() {
 // Log errors
 var callback = function handleError(error) {
   if (error) {
-    console.error('response status:', error.statusCode);
-    console.error('data:', error.data);
+    console.error("response status:", error.statusCode);
+    console.error("data:", error.data);
   }
 };
 
@@ -146,15 +146,15 @@ var callback = function handleError(error) {
 // var queue = [];
 // Get a stream of Tweets
 function startStreaming() {
-  lol.stream('statuses/filter', { track: "@lolem_ipsum" }, function(stream) {
-    console.log('Listening for Tweets...');
-    stream.on('data', function(tweet) {
+  lol.stream("statuses/filter", { track: "@lolem_ipsum" }, function(stream) {
+    console.log("Listening for Tweets...");
+    stream.on("data", function(tweet) {
       // Check Tweet for specific matching phrases as Twitter's Streaming API doesn't allow for this
       if (tweet.text.match("cat")) {
         var number = getRandNum();
         var catText = getRandCatIpsum();
         var catParams = {
-          status: '@' + tweet.user.screen_name + catText,
+          status: "@" + tweet.user.screen_name + catText,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
@@ -163,7 +163,7 @@ function startStreaming() {
         var number = getRandNum();
         var baconText = getRandBaconIpsum();
         var baconParams = {
-          status: '@' + tweet.user.screen_name + baconText,
+          status: "@" + tweet.user.screen_name + baconText,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
@@ -172,7 +172,7 @@ function startStreaming() {
         var number = getRandNum();
         var hipsterText = getRandHipsterIpsum();
         var hipsterParams = {
-          status: '@' + tweet.user.screen_name + hipsterText,
+          status: "@" + tweet.user.screen_name + hipsterText,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
@@ -181,7 +181,7 @@ function startStreaming() {
         var number = getRandNum();
         var spaceText = getRandSpaceIpsum();
         var spaceParams = {
-          status: '@' + tweet.user.screen_name + spaceText,
+          status: "@" + tweet.user.screen_name + spaceText,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
@@ -190,7 +190,7 @@ function startStreaming() {
         var number = getRandNum();
         var yogaText = getRandYogaIpsum();
         var yogaParams = {
-          status: '@' + tweet.user.screen_name + yogaText,
+          status: "@" + tweet.user.screen_name + yogaText,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
@@ -199,7 +199,7 @@ function startStreaming() {
         var number = getRandNum();
         var bsniiText = getRandBsniiIpsum();
         var bsniiParams = {
-          status: '@' + tweet.user.screen_name + bsniiText,
+          status: "@" + tweet.user.screen_name + bsniiText,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
@@ -208,7 +208,7 @@ function startStreaming() {
         var number = getRandNum();
         var swolText = getRandSwolIpsum();
         var swolParams = {
-          status: '@' + tweet.user.screen_name + swolText,
+          status: "@" + tweet.user.screen_name + swolText,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
@@ -217,7 +217,7 @@ function startStreaming() {
         var number = getRandNum();
         var tacoBellText = getRandTacoBellIpsum();
         var tacoBellParams = {
-          status: '@' + tweet.user.screen_name + tacoBellText,
+          status: "@" + tweet.user.screen_name + tacoBellText,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
@@ -226,14 +226,14 @@ function startStreaming() {
         var number = getRandNum();
         var dogeText = getRandDogeIpsum();
         var dogeParams = {
-          status: '@' + tweet.user.screen_name + dogeText,
+          status: "@" + tweet.user.screen_name + dogeText,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
         lol.updateStatus(dogeParams, dogeParams, callback);
       } else {
         var nopeParams = {
-          status: '@' + tweet.user.screen_name + nope,
+          status: "@" + tweet.user.screen_name + nope,
           in_reply_to_status_id: tweet.id
         };
         console.log(tweet.text);
