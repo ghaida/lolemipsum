@@ -121,6 +121,19 @@ function getRandTacoBellIpsum() {
   return tacobellipsum;
 }
 
+// get a dogeipsum
+function getRandDogeIpsum() {
+  dogeipsums = [
+  " wow. many text. such HTML. very placeholder. lorem graphic.  very filler. lorem generator. so text. much generator.",
+  " so typography. so filler. much generator. such generator. many github. many HTML. lorem ipsum. so text. such graphic.",
+  " very graphic. very layout. so javascript. much dogescript. so doge. many HTML. lorem dogescript. lorem doge. lorem graphic.",
+  " very graphic. very layout. so javascript. much dogescript. so doge. many HTML. lorem dogescript. lorem doge. lorem graphic.",
+  " many HTML. many layout. very graphic. very typography. much text. much placeholder. very HTML. much github. wow."
+  ];
+  var dogeipsum = getRandIndex(dogeipsums);
+  return dogeipsum;
+}
+
 // Log errors
 var callback = function handleError(error) {
   if (error) {
@@ -216,6 +229,16 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(tacoBellParams, tacoBellParams, callback);
+      }
+      else if(tweet.text.match("doge")) {
+        var number = getRandNum();
+        var dogeText = getRandDogeIpsum();
+        var dogeParams = {
+          status: '@' + tweet.user.screen_name + dogeText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(dogeParams, dogeParams, callback);
       }
       else {
         var nopeParams = {
