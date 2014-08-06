@@ -8,6 +8,8 @@ This is the coolest twitter bot in all the land! It'll generate a short paragrap
 * :stars: Space text from http://spaceipsum.com/
 * :ok_woman: Yoga text from http://www.kellykundalini.com/yoga/funny-yoga-filler-text-aka-yoga-ipsum/
 * :muscle: Climbing text
+* :taco_emoji: Taco Bell
+* :dog2: Doge text from http://dogeipsum.com/
 
 Obvi there are probably better ways to get the text than to just put static text in array but whatevs.
 
