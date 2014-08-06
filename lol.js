@@ -30,6 +30,12 @@ function getNope() {
   " zzzZZZzzzZZZZzzz",
   " zzz",
   " Sleeping, bye.",
+  " I don't know that one, but how are you?",
+  " Not sure what that is, but you're looking sharp today!",
+  " You picked the ONE THING I don't know.",
+  " Sigh.",
+  " Nah.",
+  " Don't feel like it. Tell me a joke instead.",
   " Ohai!",
   " I guess I could learn about that sometime."
   ];
