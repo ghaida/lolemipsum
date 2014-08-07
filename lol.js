@@ -14,7 +14,7 @@ function getRandIndex(array) {
 function getNope() {
   nopes = [
   " Nope.",
-  " Nope, nope, nope."
+  " Nope, nope, nope.",
   " I'll only reply to cat, bacon, hipster, space, yoga, swol, taco bell, and doge k.",
   " Busy now, bye!",
   " LOL as if.",
