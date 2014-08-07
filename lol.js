@@ -193,7 +193,7 @@ function startStreaming() {
         var catText = getRandCatIpsum();
         var catParams = {
           status: "@" + tweet.user.screen_name + catText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(catParams, catParams, callback);
@@ -201,7 +201,7 @@ function startStreaming() {
         var baconText = getRandBaconIpsum();
         var baconParams = {
           status: "@" + tweet.user.screen_name + baconText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(baconParams, baconParams, callback);
@@ -209,7 +209,7 @@ function startStreaming() {
         var hipsterText = getRandHipsterIpsum();
         var hipsterParams = {
           status: "@" + tweet.user.screen_name + hipsterText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(hipsterParams, hipsterParams, callback);
@@ -217,7 +217,7 @@ function startStreaming() {
         var spaceText = getRandSpaceIpsum();
         var spaceParams = {
           status: "@" + tweet.user.screen_name + spaceText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(spaceParams, spaceParams, callback);
@@ -225,7 +225,7 @@ function startStreaming() {
         var yogaText = getRandYogaIpsum();
         var yogaParams = {
           status: "@" + tweet.user.screen_name + yogaText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(yogaParams, yogaParams, callback);
@@ -233,7 +233,7 @@ function startStreaming() {
         var bsniiText = getRandBsniiIpsum();
         var bsniiParams = {
           status: "@" + tweet.user.screen_name + bsniiText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(bsniiParams, bsniiParams, callback);
@@ -241,7 +241,7 @@ function startStreaming() {
         var swolText = getRandSwolIpsum();
         var swolParams = {
           status: "@" + tweet.user.screen_name + swolText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(swolParams, swolParams, callback);
@@ -249,7 +249,7 @@ function startStreaming() {
         var tacoBellText = getRandTacoBellIpsum();
         var tacoBellParams = {
           status: "@" + tweet.user.screen_name + tacoBellText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(tacoBellParams, tacoBellParams, callback);
@@ -257,7 +257,7 @@ function startStreaming() {
         var dogeText = getRandDogeIpsum();
         var dogeParams = {
           status: "@" + tweet.user.screen_name + dogeText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(dogeParams, dogeParams, callback);
@@ -265,7 +265,7 @@ function startStreaming() {
         var hodorText = getRandHodorIpsum();
         var hodorParams = {
           status: "@" + tweet.user.screen_name + hodorText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(hodorParams, hodorParams, callback);
@@ -273,7 +273,7 @@ function startStreaming() {
         var nopeText = getNope();
         var nopeParams = {
           status: "@" + tweet.user.screen_name + nopeText,
-          in_reply_to_status_id: tweet.id
+          in_reply_to_status_id: tweet.id_str
         };
         console.log(tweet.text);
         lol.updateStatus(nopeParams, nopeParams, callback);
