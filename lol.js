@@ -185,7 +185,7 @@ var callback = function handleError(error) {
 // var queue = [];
 // Get a stream of Tweets
 function startStreaming() {
-  lol.stream("statuses/mentions_timeline", function(stream) {
+  lol.stream("statuses/filter", { track: "@lolem_ipsum" }, function(stream) {
     console.log("Listening for Tweets...");
     stream.on("data", function(tweet) {
       // Check Tweet for specific matching phrases as Twitter's Streaming API doesn't allow for this
