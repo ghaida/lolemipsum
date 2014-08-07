@@ -14,6 +14,7 @@ function getRandIndex(array) {
 function getNope() {
   nopes = [
   " Nope.",
+  " Nope, nope, nope."
   " I'll only reply to cat, bacon, hipster, space, yoga, swol, taco bell, and doge k.",
   " Busy now, bye!",
   " LOL as if.",
@@ -28,13 +29,12 @@ function getNope() {
   " zzz",
   " Sleeping, bye.",
   " I don't know that one, but how are you?",
-  " Not sure what that is, but you're looking sharp today!",
-  " You picked the ONE THING I don't know.",
+  " Sorry, I was distracted by how good looking my creator is. #notsorry",
   " Sigh.",
   " Nah.",
   " Don't feel like it. Tell me a joke instead.",
   " Ohai!",
-  " I guess I could learn about that sometime."
+  " Meh."
   ];
   var nope = getRandIndex(nopes);
   return nope;
@@ -160,6 +160,18 @@ function getRandDogeIpsum() {
   var dogeipsum = getRandIndex(dogeipsums);
   return dogeipsum;
 }
+// get a hodoripsum
+function getRandHodorIpsum() {
+  hodoripsums = [
+  " Hodor, hodor hodor hodor hodor; hodor hodor. Hodor? Hodor hodor hodor hodor. Hodor! Hodor hodor hodor, hodor.",
+  " Hodor hodor hodor, hodor hodor! Hodor, hodor... Hodor? Hodor hodor hodor. Hodor! Hodor hodor hodor, hodor hodor.",
+  " Hodor!! Hodor hodor, hodor hodor. Hodor hodor hodor; HODOR hodor hodor. Hodor? Hodor hodor hodor, hodor hodor.",
+  " Hodor Hodor hodor hodor hodor... Hodor hodor hodor! Hodor hodor hodor hodor. Hodor hodor hodor hodor hodor hodor.",
+  " Hodor Hodor hodor HODOR hodor; hodor hodor hodor. Hodor hodor hodor hodor. Hodor. Hodor, hodor hodor hodor. Hodor?"
+  ];
+  var hodoripsum = getRandIndex(hodoripsums);
+  return hodoripsum;
+}
 
 // Log errors
 var callback = function handleError(error) {
@@ -173,7 +185,7 @@ var callback = function handleError(error) {
 // var queue = [];
 // Get a stream of Tweets
 function startStreaming() {
-  lol.stream("statuses/filter", { track: "@lolem_ipsum" }, function(stream) {
+  lol.stream("statuses/mentions_timeline", function(stream) {
     console.log("Listening for Tweets...");
     stream.on("data", function(tweet) {
       // Check Tweet for specific matching phrases as Twitter's Streaming API doesn't allow for this
@@ -249,6 +261,14 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(dogeParams, dogeParams, callback);
+      } else if(tweet.text.match("hodor")) {
+        var hodorText = getRandHodorIpsum();
+        var hodorParams = {
+          status: "@" + tweet.user.screen_name + hodorText,
+          in_reply_to_status_id: tweet.id
+        };
+        console.log(tweet.text);
+        lol.updateStatus(hodorParams, hodorParams, callback);
       } else {
         var nopeText = getNope();
         var nopeParams = {
