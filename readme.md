@@ -17,6 +17,6 @@ Obvi there are probably better ways to get the text than to just put static text
 I followed this awesome tutorial by Imogen Wentworth to create the bot:
 http://imogenation.net/building-a-node-js-twitter-bot/
 
-To use this awesome bot, tweet "gimme [cat, bacon, hipster, space, yoga, swol] text" @lolem_ipsum.
+To use this awesome bot, tweet "[cat, bacon, hipster, space, yoga, swol, taco bell, doge, zelda]" @lolem_ipsum.
 
 This bot is proudly powered by burritos. :sunglasses:
