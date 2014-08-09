@@ -10,6 +10,7 @@ This is the coolest twitter bot in all the land! It'll generate a short paragrap
 * :muscle: Climbing text
 * :taco_emoji: Taco Bell
 * :dog2: Doge text from http://dogeipsum.com/
+* :fallen_leaf: Hylian
 
 Obvi there are probably better ways to get the text than to just put static text in array but whatevs.
 

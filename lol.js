@@ -19,7 +19,7 @@ function getNope() {
   " Busy now, bye!",
   " LOL as if.",
   " Maybe later.",
-  " I don't feel like it. Come back later.",
+  " Meh. Come back later.",
   " Gah no.",
   " You can't make me.",
   " I said goodby, sir!",
@@ -172,6 +172,20 @@ function getRandHodorIpsum() {
   var hodoripsum = getRandIndex(hodoripsums);
   return hodoripsum;
 }
+// get a zeldaipsum
+function getRandHylianIpsum() {
+  hylianipsums = [
+  " A link to the past kokiri forest lost woods, jabu-jabu. Adventures of link mini-dungeon kokiri sword hylian shield cuccos.",
+  " Deku escort fireball dungeon lava triforce sheik ocarina of time bazaar big bomb bag quiver big skulltul, king of thieves.",
+  " Wolfos titan's mitt temple of time zora. Zora's fountain, rupees treasure chest piece of heart megaton hammer magic jar.",
+  " Lon lon milk mirror shield, navi pegasus boots. Odd potion octorok skill mask magic meter magic cape majora's mask boss key.",
+  " Book of mudora ganon boss key goron deku stick. Din's fire fairy bottle gerudo ganondorf link zelda hyrule, deku seeds.",
+  " Deku escort fireball dungeon lava triforce. Sheik ocarina of time bazaar big bomb bag quiver big skulltul, king of thieves.",
+  " House of know-it-all brothers hero of time iron boots ice rod, Like-like lon lon ranch miniboss arrghus biggest bomb bag."
+  ];
+  var hylianipsum = getRandIndex(hylianipsums);
+  return hylianipsum;
+}
 
 // Log errors
 var callback = function handleError(error) {
@@ -269,6 +283,14 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(hodorParams, hodorParams, callback);
+      } else if(tweet.text.match("zelda")) {
+        var hylianText = getRandHylianIpsum();
+        var hylianParams = {
+          status: "@" + tweet.user.screen_name + hylianText,
+          in_reply_to_status_id: tweet.id_str
+        };
+        console.log(tweet.text);
+        lol.updateStatus(hylianParams, hylianParams, callback);
       } else {
         var nopeText = getNope();
         var nopeParams = {
