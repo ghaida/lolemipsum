@@ -187,6 +187,19 @@ function getRandHylianIpsum() {
   return hylianipsum;
 }
 
+// get a zeldaipsum
+function getRandBeerIpsum() {
+  beeripsums = [
+  " Hoppy grainy cold filter cask, bottom fermenting yeast trappist lagering. Bottle conditioning attenuation, cask priming.",
+  " Krausen fermentation priming biere de garde grainy. Goblet bung, fermentation beer barleywine pitching dunkle chocolate.",
+  " Hop back hops hydrometer hop back hand pump enzymes bright beer wit berliner weisse. saccharification, chocolate malt.",
+  " Scotch ale finishing hops, bottom fermenting yeast infusion, brew. Autolysis dry stout beer caramel malt carbonation?",
+  " Hefe acidic conditioning secondary fermentation hard cider krug top-fermenting yeast pub conditioning tank bitter."
+  ];
+  var beeripsum = getRandIndex(beeripsums);
+  return beeripsum;
+}
+
 // Log errors
 var callback = function handleError(error) {
   if (error) {
@@ -291,6 +304,14 @@ function startStreaming() {
         };
         console.log(tweet.text);
         lol.updateStatus(hylianParams, hylianParams, callback);
+      } else if(tweet.text.match("beer")) {
+        var beerText = getRandBeerIpsum();
+        var beerParams = {
+          status: "@" + tweet.user.screen_name + beerText,
+          in_reply_to_status_id: tweet.id_str
+        };
+        console.log(tweet.text);
+        lol.updateStatus(beerParams, beerParams, callback);
       } else {
         var nopeText = getNope();
         var nopeParams = {
